@@ -19,8 +19,8 @@ jobs:
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v1
 
-      - name: Initialize Terraform
-        run: terraform init
-
       - name: Apply Terraform configuration
-        run: terraform destroy -auto-approve
+        run: |
+          cd infra
+          terraform init
+          terraform destroy -auto-approve
