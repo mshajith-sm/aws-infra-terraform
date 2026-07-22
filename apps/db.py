@@ -4,7 +4,7 @@ from psycopg import connect
 def save_employee(data):
 
     with connect(
-        host="localhost",
+        host="postgres-db",
         port=5432,
         dbname="employee_db",
         user="admin",

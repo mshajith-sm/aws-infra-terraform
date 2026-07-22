@@ -77,7 +77,7 @@ class MyHandler(BaseHTTPRequestHandler):
             """)
 
 
-server = HTTPServer(("localhost", 8080), MyHandler)
+server = HTTPServer(("0.0.0.0", 8080), MyHandler)
 
 print("Server started on http://localhost:8080")
 
